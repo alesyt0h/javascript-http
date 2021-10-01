@@ -23,6 +23,7 @@ const resp = await fetch(url, {
 // Response has to be converted to JSON
 const data = await resp.json();
 ```
+* **catch**: Para disparar el catch en una promesa de un fetch, tiene que dispararse un error **dentro** de la respuesta. Es decir: `.then( if(!resp.ok) throw new Error('Fail during the petition') )`
 * **Init**: Creación de una funcion que es la unica que exportamos, con todas las llamadas a las funciones que necesitaremos de ese archivo.
 * Importación multiple para poder usar dicho objeto con todos sus propiedades y métodos: `import * as CRUD from './js/crud-provider'`
 * Importación de archivos con renombramiento: `import { init as initChistes } from './js/chistes-page'`
